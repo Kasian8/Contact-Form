@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="popupMessage">
+    <h2><span>✔</span>
+      Message Sent!</h2>
+    <p> Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form action="#">
+
+
+      <div class="name" id="name">
+        <div class="fName">
+          <label for="firstName" class="lbStyle">First Name <span class="requiredFiled">*</span></label>
+          <div class="wraper">
+            <input type="text" class="firstName" id="firstName" name="firstName" >
+          </div>
+          <p class="formAlert alertFn">This field is required</p>
+        </div>
+
+        <div class="lName">
+          <label for="lastName" class="lbStyle">Last Name <span class="requiredFiled">*</span></label>
+          <input type="text" class="lastName" id="lastName" name="lastName" > 
+          <p class="formAlert alertLn">This field is required</p>
+          </div>
+      </div>
+
+
+
+      <div class="eMailDiv">
+        <label for="eMail" class="lbStyle">Email Address <span class="requiredFiled">*</span></label>
+        <input type="email" class="eMail" id="eMail" name="eMail" >     
+        <p class="formAlert alertEm">Please enter a valid email address</p>
+      </div>
+
+
+
+      <div class="queryType">
+        <label class="lbStyle">Query Type <span class="requiredFiled">*</span></label>
+
+        <div class="bouth">
+
+          <div class="gEnquiry">
+            <input type="radio" id="generalEnquiry" name="queryType" value="generalEnquiry">
+            <label for="generalEnquiry" class="lbStyle lb">General Enquiry</label>
+          </div>
+
+          <div class="sRequest">
+            <input type="radio" id="supportRequest" name="queryType" value="supportRequest">
+            <label for="supportRequest" class="lbStyle">Support Request</label>
+          </div>
+
+        </div>
+          <p class="formAlert alertCk">This field is required</p>
+      </div>
+
+
+
+      <div class="message">
+        <label for="message" class="lbStyle">Message <span class="requiredFiled">*</span></label>
+        <textarea name="message" id="message" rows="4" cols="40" maxlength="236"></textarea>
+        <p class="formAlert alertTxt">This field is required</p>
+      </div>
+
+
+
+      <div class="checkTerms">
+        <input type="checkbox" id="checkTerms">
+        <label for="checkTerms" class="lbStyle"> I consent to being contacted by the team <span class="requiredFiled">*</span></label>
+        <p class="formAlert alertTerms">To submit this form, please consent to being contacted</p>
+      </div>
+
+
+      <div class="subBtn">
+        <button type="submit" id="submitBtn">Submit</button>
+      </div>
+      
+
+
+
+    </form>
+  </div>
+
+  
+
+  
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(148, 38%, 91%);
+    font-family: 'Karla','Arial';
+    overflow-y: auto; 
+}
+
+.container{
+    min-width: 500px;
+    min-height: 580px;
+    max-height:auto;
+    padding: 0 30px;
+    border-radius: 10px ;
+    background: hsl(0, 0%, 100%);
+}
+
+/*Contact us*/
+    .container h1{
+        margin:30px 0;
+        font-size:1.5rem;
+    }
+/*-------------*/
+
+/*Names tags*/
+.name{
+    display: flex;
+    justify-content: space-between;
+}
+.fName,.lName{
+    display: flex;
+    flex-direction: column;
+}
+.firstName,.lastName{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius:5px;
+    height: 35px;
+    width: 215px;
+    border:1px solid hsl(186, 15%, 59%);
+    outline:none;
+}
+.firstName:focus,.lastName:focus{
+    border:1px solid hsl(169, 82%, 27%);
+}
+.firstName:hover,.lastName:hover{
+    cursor: pointer;
+}
+/*End Of Names tags*/
+
+/*Email tags*/
+
+.eMail{
+    display: flex;
+    flex-direction: column;
+}
+
+.eMail{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius:5px;
+    height: 35px;
+    width: 100%;
+    border:1px solid hsl(186, 15%, 59%);
+    outline:none;
+}
+.eMail:focus{
+    border:1px solid hsl(169, 82%, 27%);
+}
+.eMail:hover{
+    cursor:pointer
+}
+/*End of email tags*/
+
+/*Radio tags*/
+.queryType .bouth{
+    display:flex;
+    justify-content: space-between;
+}
+
+.gEnquiry, .sRequest{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius:5px;
+    height: 35px;
+    width: 215px;
+    border:1px solid hsl(186, 15%, 59%);
+    display:flex;
+    align-items:center;
+}
+
+
+.gEnquiry label, .sRequest label{
+    display:inline-flex;
+    align-items: center;
+    cursor:pointer;
+    position:relative;
+    padding-left: 50px;
+    font-size: 0.9rem;
+}
+
+.gEnquiry label::before,
+.sRequest label::before{
+    content:'';
+    width:12px;
+    height:12px;
+    border: 1px solid hsl(169, 82%, 27%);
+    border-radius: 50%;
+    position:absolute;
+    top:15%;
+    left:20px;
+    margin-right: 10px;
+}
+
+.gEnquiry:has(input[type="radio"]:checked),
+.sRequest:has(input[type="radio"]:checked){
+    background-color: hsl(148, 38%, 91%);
+    border: 1px solid hsl(169, 82%, 27%);
+}
+.gEnquiry input[type="radio"]:checked + label::before,
+.sRequest input[type="radio"]:checked + label::before{
+    background-color: white;
+}
+.gEnquiry input[type="radio"]:checked + label::after,
+.sRequest input[type="radio"]:checked + label::after{
+    content:'';
+    width:8px;
+    height:8px;
+    background-color: hsl(169, 82%, 27%);
+    border-radius: 50%;
+    position:absolute;
+    top:35%;
+    left:23px;
+}
+
+.gEnquiry input,.sRequest input{
+    margin-left:20px;
+}
+
+.queryType input[type="radio"]{
+    display:none;
+}
+
+/*End of radio tags*/
+
+/*Message tags*/
+    .message{
+        display:flex;   
+        flex-direction:column;
+    }
+    .message textarea{
+        margin-top: 10px;
+        resize:none;
+        border-radius: 5px;
+        border:1px solid hsl(186, 15%, 59%);
+        padding: 10px;
+        outline:none;
+    }
+    .message textarea:focus{
+        border:1px solid hsl(169, 82%, 27%);
+    }
+    .message textarea:hover{
+        cursor:pointer
+    }
+/*End of message tags*/
+
+/*checkTerms*/
+    .checkTerms{
+        display:block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .checkTerms input[type="checkbox"]{
+        accent-color: hsl(169, 82%, 27%);
+    }
+/*------------*/
+
+/*Submit Button*/
+    #submitBtn{
+        width:100%;
+        height:40px;
+        display:block;
+        background-color:hsl(169, 82%, 27%);
+        border-radius: 5px;
+        color: white;
+        font-family: 'karla';
+        border: none;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+/*----------------------*/
+/*labels*/
+.lbStyle{
+    font-size:0.8rem;
+    color:hsl(187, 24%, 22%);
+}
+
+input{
+    padding:10px;
+}
+
+/*Alert tags*/
+.formAlert{
+    color:hsl(0, 66%, 54%);
+    font-size:0.8rem;
+    margin-top:5px;
+    margin-bottom:10px; 
+    display:none;
+}
+
+.alertFn ,.alertLn,.alertEm{
+    margin-top:-5px;
+}
+
+.alertRedBorder{
+    border:1px solid hsl(0, 66%, 54%);
+}
+/*-----------------------*/
+
+
+/*Popup Message tags*/
+    .popupMessage{
+        position:absolute;
+        top:105px;
+        background-color:hsl(187, 24%, 22%);
+        color:hsl(0, 0%, 100%);
+        padding:20px;
+        width: 370px;
+        height:80px;
+        border-radius: 10px;
+        display:flex;
+        flex-direction: column;
+       
+        
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    }
+
+    .show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popupMessage p{
+        color:hsl(186, 15%, 59%);
+        font-size: 0.8rem;
+        margin-top:10px
+    }
+    .popupMessage h2{
+        font-size: 0.8rem;
+    }
+/*-----------------*/
+input, textarea {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+@media (max-width: 600px) {
+    
+    .container{
+        width:90%;
+        min-width: unset;
+        padding: 20px;
+        min-height:auto;
+        margin:30px auto;
+    }
+    
+    .name{
+        flex-direction: column;
+    }
+    .firstName,.lastName{
+        width:100%
+    }
+    .queryType .bouth{
+        flex-direction: column;
+    }
+    .gEnquiry,.sRequest{
+        width:100%;
+    }
+    .popupMessage{
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,50%);
+    }
+}
